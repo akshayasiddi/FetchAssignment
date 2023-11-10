@@ -34,4 +34,4 @@ Before running the Streamlit app using Docker, make sure you have the following 
    Open your web browser and navigate to [http://localhost:8080](http://localhost:85080).
    
 ### Alternate
-Alternatively, you can access the app online at [https://fetchassignment.streamlit.app/](https://fetchassignment.streamlit.app/).
+Alternatively, you can access the app online at [https://scanned-receipts-prediction.streamlit.app/](https://scanned-receipts-prediction.streamlit.app/).
