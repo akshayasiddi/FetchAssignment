@@ -1,15 +1,13 @@
 import streamlit as st
 st.set_page_config(page_title="Information", page_icon="💡", layout="wide")
-# Set the title for your app
+
 st.title('Understanding Neural Network Parameters')
 
-# Add some introductory text
 st.write("""
          This page is designed to help you understand some of the terms used in 
          this app.
          """)
 
-# Explain what an epoch is
 st.header('Epoch')
 st.write("""
          Think of an epoch like a single, complete run-through of all your data. If you're 
@@ -19,7 +17,6 @@ st.write("""
          """)
 
 
-# Explain what the hidden layer size is
 st.header('Hidden Layer Size')
 st.write("""
          In our neural network, a hidden layer is like a team of detectives trying to solve a 
@@ -29,7 +26,6 @@ st.write("""
          """)
 
 
-# Explain what the sequence length is
 st.header('Sequence Length')
 st.write("""
          Let's say you're watching a TV series to guess what happens in the next episode. 
@@ -42,7 +38,6 @@ st.write("""
          """)
 \
 
-# Add some closing text
 st.write("""
          Play around with the settings to see how they affect the training!
          """)
