@@ -12,7 +12,6 @@ Before running the Streamlit app using Docker, make sure you have the following 
 
    ```bash
    git clone https://github.com/akshayasiddi/FetchAssignment.git
-   cd your-repo
    ```
 
 2. Build the Docker image:
