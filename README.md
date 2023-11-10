@@ -24,7 +24,7 @@ Before running the Streamlit app using Docker, make sure you have the following 
 3. Run the Docker container:
 
    ```bash
-   docker run -p 8501:8501 streamlit-prediction-app
+   docker run -p 8080:8501 streamlit-prediction-app
    ```
 
    - The `-p` flag maps port 8501 from the container to your host machine, allowing you to access the app in your browser.
