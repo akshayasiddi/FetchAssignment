@@ -129,7 +129,7 @@ def main():
     """
     The main function to render the Streamlit interface.
     """
-    st.set_page_config(page_title="🧠Prediction", page_icon="🧠", layout="wide")
+    st.set_page_config(page_title="Prediction", page_icon="🧠", layout="wide")
     
     st.title('Receipt Count Prediction')
 
