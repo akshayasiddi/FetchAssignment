@@ -134,7 +134,7 @@ def main():
     st.title('Receipt Count Prediction')
 
     st.write("""
-         In an ideal situation Epochs = 1000; Hidden Layer size = 5; Sequence Length = 3
+         In an ideal situation : Epochs = 1000, Hidden Layer size = 5, Sequence Length = 3.
          """)
 
     # Widget to set the number of epochs
