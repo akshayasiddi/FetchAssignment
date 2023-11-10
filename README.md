@@ -31,4 +31,4 @@ Before running the Streamlit app using Docker, make sure you have the following 
 
 4. Access the Streamlit app in your web browser:
 
-   Open your web browser and navigate to [http://localhost:8501](http://localhost:8501).
+   Open your web browser and navigate to [http://localhost:8080](http://localhost:85080).
