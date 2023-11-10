@@ -133,6 +133,10 @@ def main():
     
     st.title('Receipt Count Prediction')
 
+    st.write("""
+         In an ideal situation Epochs = 1000; Hidden Layer size = 5; Sequence Length = 3
+         """)
+
     # Widget to set the number of epochs
     epochs = st.slider('Select the number of epochs for training:', min_value=100, max_value=10000, value=1000)
     hidden_size = st.number_input('Hidden Layer Size', min_value=1, value=5)
