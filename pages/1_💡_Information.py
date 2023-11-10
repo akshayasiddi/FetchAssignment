@@ -37,6 +37,9 @@ st.write("""
          your guess. Remembering more episodes might help you guess better, but it might also 
          confuse you with too much information.
          """)
+st.write("""
+         In an ideal situation Epochs = 1000; Hidden Layer size = 5; Sequence Length = 3
+         """)
 \
 
 # Add some closing text
