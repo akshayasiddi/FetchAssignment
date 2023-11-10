@@ -158,15 +158,6 @@ def main():
         predictions = [(p * (max_value - min_value) + min_value) for p in predictions_normalized]
         #print(predictions)
 
-        
-        # Plotting
-        # Convert the index to a list of dates for plotting
-        dates = monthly_data.index.to_list()
-
-        # Extend dates with next year's months for predictions
-        prediction_dates = pd.date_range(dates[-1] + pd.DateOffset(months=1), periods=12, freq='M')
-        all_dates = dates + prediction_dates.tolist()
-
         # Plotting
         # Convert the index to a list of dates for plotting
         dates = monthly_data.index.to_list()
@@ -206,4 +197,4 @@ if __name__ == '__main__':
     main()
 
 #docker build -t last .
-#docker run -p 8080:8501 image id
+#docker run -p 8080:8501 last
