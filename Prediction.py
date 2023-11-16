@@ -69,7 +69,7 @@ def main():
 
         # Plotting
         plt.figure(figsize=(12, 6))
-        x_values = monthly_data.index.values
+        x_values = monthly_data.index
         plt.plot(x_values, monthly_receipts, label='Historical Data')
         plt.plot(pd.date_range(start=monthly_data.index[-1], periods=13, freq='M')[1:], predictions_2022, label='Predictions for 2022', linestyle='--')
 
