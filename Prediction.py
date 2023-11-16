@@ -78,7 +78,10 @@ def main():
         # Generate date range starting from the converted Timestamp
         date_range = pd.date_range(start=start_date, periods=13, freq='M')[1:]
         
-        plt.plot(date_range, predictions_2022, label='Predictions for 2022', linestyle='--')
+        # Convert date_range to a numpy array
+        date_range_np = date_range.to_numpy()
+        
+        plt.plot(date_range_np, predictions_2022, label='Predictions for 2022', linestyle='--')
         
         plt.xlabel('Month')
         plt.ylabel('Receipt Counts')
@@ -87,6 +90,7 @@ def main():
         plt.grid(True)
         plt.xticks(rotation=45)
         plt.tight_layout()
+
 
 
 
