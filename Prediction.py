@@ -68,7 +68,7 @@ def main():
         predictions_2022 = predict_for_2022(model, start_index=start_index_for_2022)
 
        # Plotting
-       plt.figure(figsize=(12, 6))
+        plt.figure(figsize=(12, 6))
         x_values = np.array(monthly_data.index) 
         plt.plot(x_values, monthly_receipts, label='Historical Data')
         
