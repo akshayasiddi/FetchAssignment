@@ -68,16 +68,17 @@ def main():
         predictions_2022 = predict_for_2022(model, start_index=start_index_for_2022)
 
        # Plotting
-        plt.figure(figsize=(12, 6))
+       plt.figure(figsize=(12, 6))
         x_values = np.array(monthly_data.index) 
         plt.plot(x_values, monthly_receipts, label='Historical Data')
         
-        # Select the last date as the start for predictions
-        start_date = np.array(monthly_data.index[-1])
-        prediction_dates = pd.date_range(start=start_date, periods=13, freq='M')[1:]
-        prediction_dates_array = np.array(prediction_dates)
+        # Convert the numpy array to Timestamp
+        start_date = pd.Timestamp(monthly_data.index[-1])
         
-        plt.plot(prediction_dates_array, predictions_2022, label='Predictions for 2022', linestyle='--')
+        # Generate date range starting from the converted Timestamp
+        date_range = pd.date_range(start=start_date, periods=13, freq='M')[1:]
+        
+        plt.plot(date_range, predictions_2022, label='Predictions for 2022', linestyle='--')
         
         plt.xlabel('Month')
         plt.ylabel('Receipt Counts')
@@ -86,6 +87,7 @@ def main():
         plt.grid(True)
         plt.xticks(rotation=45)
         plt.tight_layout()
+
 
 
         st.pyplot(plt)
