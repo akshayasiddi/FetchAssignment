@@ -67,12 +67,18 @@ def main():
         start_index_for_2022 = len(X)  # Starting index for 2022
         predictions_2022 = predict_for_2022(model, start_index=start_index_for_2022)
 
-        # Plotting
+       # Plotting
         plt.figure(figsize=(12, 6))
         x_values = np.array(monthly_data.index) 
         plt.plot(x_values, monthly_receipts, label='Historical Data')
-        plt.plot(pd.date_range(start=np.array(monthly_data.index[-1]), periods=13, freq='M')[1:], predictions_2022, label='Predictions for 2022', linestyle='--')
-
+        
+        # Select the last date as the start for predictions
+        start_date = np.array(monthly_data.index[-1])
+        prediction_dates = pd.date_range(start=start_date, periods=13, freq='M')[1:]
+        prediction_dates_array = np.array(prediction_dates)
+        
+        plt.plot(prediction_dates_array, predictions_2022, label='Predictions for 2022', linestyle='--')
+        
         plt.xlabel('Month')
         plt.ylabel('Receipt Counts')
         plt.title('Monthly Receipt Counts: Historical and Predictions for 2022')
@@ -80,6 +86,7 @@ def main():
         plt.grid(True)
         plt.xticks(rotation=45)
         plt.tight_layout()
+
 
         st.pyplot(plt)
 
